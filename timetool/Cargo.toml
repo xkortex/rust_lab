@@ -1,0 +1,36 @@
+[package]
+name = "timetool"
+version = "0.22.0"
+authors = ["Mike McDermott "]
+license = "MIT"
+keywords = ["time", "date", "settimeofday"]
+repository = "https://github.com/xkortex/rust_lab"
+documentation = "https://docs.rs/kv"
+description = "Sets the time of day"
+readme = "README.md"
+edition = "2018"
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dependencies]
+nix = "0.19"
+chrono = "0.4"
+sntpc = "0.2"
+log = "0.4"
+env_logger = "0.8"
+
+serde-lexpr = {version = "0.1", optional = true}
+clap = "2"
+walkdir = "1"
+time = "0.1"
+termion = "1.5"
+
+
+[features]
+default = []
+
+
+[[bin]]
+name = "timetool"
+path = "src/timetool.rs"
